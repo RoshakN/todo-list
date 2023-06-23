@@ -11,7 +11,6 @@ export default function List() {
   };
 
   const textUpdate = function (event) {
-    console.log(event.target.value);
     setInputText(event.target.value);
   };
 
@@ -21,9 +20,7 @@ export default function List() {
         <input type="text" placeholder="New task..." onChange={textUpdate} />
         <button onClick={addTask}>Add New Task</button>
       </div>
-      <div className="tasks">
-        <p>{taskList}</p>
-      </div>
+      <div className="tasks">{console.log(taskList)};</div>
     </div>
   );
 }

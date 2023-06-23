@@ -1,12 +1,29 @@
 import React from "react";
 
 export default function List() {
-  const [count, setCount] = React.useState(0);
+  const [inputText, setInputText] = React.useState("");
+  const [taskList, setTaskList] = React.useState([]);
+
+  const addTask = function () {
+    setTaskList((prevList) => {
+      return [...prevList, inputText];
+    });
+  };
+
+  const textUpdate = function (event) {
+    console.log(event.target.value);
+    setInputText(event.target.value);
+  };
 
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+    <div className="list-container">
+      <div className="new-task">
+        <input type="text" placeholder="New task..." onChange={textUpdate} />
+        <button onClick={addTask}>Add New Task</button>
+      </div>
+      <div className="tasks">
+        <p>{taskList}</p>
+      </div>
     </div>
   );
 }

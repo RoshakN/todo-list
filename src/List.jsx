@@ -14,13 +14,17 @@ export default function List() {
     setInputText(event.target.value);
   };
 
+  const mapTasks = taskList.map((task) => <li>{task}</li>);
+
   return (
     <div className="list-container">
       <div className="new-task">
         <input type="text" placeholder="New task..." onChange={textUpdate} />
         <button onClick={addTask}>Add New Task</button>
       </div>
-      <div className="tasks">{console.log(taskList)};</div>
+      <div className="tasks">
+        <ul>{mapTasks}</ul>;
+      </div>
     </div>
   );
 }

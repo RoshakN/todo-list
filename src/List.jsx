@@ -23,7 +23,7 @@ export default function List() {
         <button onClick={addTask}>Add New Task</button>
       </div>
       <div className="tasks">
-        <ul>{mapTasks}</ul>;
+        <ul>{mapTasks}</ul>
       </div>
     </div>
   );

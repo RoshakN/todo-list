@@ -1,20 +1,35 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleCheck,
+  faPen,
+  faTrashCan,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function List() {
-  const [inputText, setInputText] = React.useState("");
+  // Task (To Do) List
   const [taskList, setTaskList] = React.useState([]);
 
+  // Temporary Input
+  const [newTask, setNewTask] = React.useState("");
+
   const addTask = function () {
-    setTaskList((prevList) => {
-      return [...prevList, inputText];
-    });
+    if (newTask) {
+      let num = taskList.length + 1;
+      let newEntry = { id: num, title: newTask, status: false };
+      // let newEntry = newTask;
+      setTaskList([...taskList, newEntry]);
+      setNewTask("");
+    }
   };
 
   const textUpdate = function (event) {
-    setInputText(event.target.value);
+    setNewTask(event.target.value);
   };
 
-  const mapTasks = taskList.map((task) => <li>{task}</li>);
+  const mapTasks = taskList.map((task) => (
+    <li>{`Task ${task.id}: ${task.title}`}</li>
+  ));
 
   return (
     <div className="list-container">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import List from "./List";
 import "./App.css";
+import List from "./List";
 
 function App() {
   const [toDoList, setToDoList] = useState([]);
@@ -23,8 +24,8 @@ function App() {
     setNewTask(event.target.value);
   };
 
-  const handleDelete = (taskName) => {
-    setToDoList(toDoList.filter((task) => task.id !== taskName.id));
+  const handleDelete = (taskId) => {
+    setToDoList(toDoList.filter((task) => task.id !== taskId));
   };
 
   const handleEnter = (event) => {
@@ -48,10 +49,12 @@ function App() {
       <div className="list">
         {toDoList.map((task) => {
           return (
-            <div>
-              <p key={task.id}>{task.title}</p>
-              <button onClick={() => handleDelete(task)}>Delete Task</button>
-            </div>
+            <List
+              key={task.id}
+              id={task.id}
+              title={task.title}
+              handleDelete={handleDelete}
+            />
           );
         })}
       </div>

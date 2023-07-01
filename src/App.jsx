@@ -9,8 +9,9 @@ function App() {
 
   const addTask = () => {
     const newTaskObject = {
-      title: newTask,
       id: toDoList.length === 0 ? 1 : toDoList[toDoList.length - 1].id + 1,
+      title: newTask,
+      isCompleted: false,
     };
     setToDoList([...toDoList, newTaskObject]);
     clear();
@@ -26,6 +27,18 @@ function App() {
 
   const handleDelete = (taskId) => {
     setToDoList(toDoList.filter((task) => task.id !== taskId));
+  };
+
+  const handleComplete = (taskId) => {
+    const newList = toDoList.map((task) => {
+      if (task.id === taskId) {
+        return { ...task, isCompleted: true };
+      } else {
+        return task;
+      }
+    });
+    setToDoList(newList);
+    // setToDoList(toDoList.filter((task) => task.id !== taskId));
   };
 
   const handleEnter = (event) => {
@@ -53,7 +66,9 @@ function App() {
               key={task.id}
               id={task.id}
               title={task.title}
+              isCompleted={task.isCompleted}
               handleDelete={handleDelete}
+              handleComplete={handleComplete}
             />
           );
         })}

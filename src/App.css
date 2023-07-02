@@ -4,3 +4,23 @@
   padding: 2rem;
   text-align: center;
 }
+
+.App {
+  width: 80%;
+  margin: 0 auto;
+  min-width: 300px;
+  padding: 10px 3%;
+  border: 1px solid red;
+}
+
+button {
+  background-color: #c5dff8;
+  padding: 5px;
+}
+
+.list-component {
+  border: 1px solid red;
+  display: flex;
+  /* padding: 10px 30px; */
+  justify-content: center;
+}

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function List(props) {
   return (
-    <div className="list">
+    <div className="list-component">
       <p key={props.key}>{props.title}</p>
       <button onClick={() => props.handleDelete(props.id)}>Delete Task</button>
       <button

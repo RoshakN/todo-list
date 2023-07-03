@@ -30,13 +30,18 @@
   border-radius: 5px;
 }
 
-.new-task > button {
+.new-task-button {
   background-color: #c5dff8;
   border: 3px double #4a55a2;
   border-radius: 5px;
   padding: 5px;
   margin: 0 10px;
   width: 80px;
+}
+
+.new-task-button:active {
+  background-color: #4a55a2;
+  color: aliceblue;
 }
 
 .list-component {
@@ -62,11 +67,6 @@
   margin: 12px;
   height: 50px;
   border: transparent;
-}
-
-.new-task-button:hover {
-  background-color: #4a55a2;
-  color: aliceblue;
 }
 
 .trash-can {

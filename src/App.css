@@ -64,7 +64,8 @@
   border: transparent;
 }
 
-.new-task-button:hover {
+.new-task-button:hover,
+.new-task-button:active {
   background-color: #4a55a2;
   color: aliceblue;
 }

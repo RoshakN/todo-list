@@ -12,6 +12,10 @@
   padding: 10px 3%;
 }
 
+.App h1 {
+  color: #4a55a2;
+}
+
 .new-task {
   display: flex;
   justify-content: center;
@@ -60,6 +64,11 @@
   border: transparent;
 }
 
+.new-task-button:hover {
+  background-color: #4a55a2;
+  color: aliceblue;
+}
+
 .trash-can {
   color: #7895cb;
 }
@@ -78,5 +87,5 @@
 }
 
 .complete {
-  color: #0a780a;
+  color: #0e600e;
 }

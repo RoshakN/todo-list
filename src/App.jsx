@@ -57,7 +57,9 @@ function App() {
           onChange={handleChange}
           onKeyDown={handleEnter}
         />
-        <button onClick={addTask}>Add</button>
+        <button onClick={addTask} className="new-task-button">
+          Add
+        </button>
       </div>
       <div className="list">
         {toDoList.map((task) => {

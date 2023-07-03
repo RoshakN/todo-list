@@ -50,11 +50,12 @@
   border-radius: 20px;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 5px;
 }
 
-.list-component > p {
+.task-title {
   margin-right: auto;
   padding-left: 50px;
   font-size: 24px;

@@ -6,7 +6,9 @@ import CheckboxFill from "remixicon-react/CheckboxFillIcon";
 export default function List(props) {
   return (
     <div className="list-component">
-      <p key={props.key}>{props.title}</p>
+      <p key={props.key} className="task-title">
+        {props.title}
+      </p>
       <button onClick={() => props.handleDelete(props.id)} title="Delete">
         <DeleteBin2Fill className="trash-can" />
       </button>

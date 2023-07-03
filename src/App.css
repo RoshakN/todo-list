@@ -21,6 +21,8 @@ button {
 .list-component {
   background-color: #c5dff8;
   border: 3px double #4a55a2;
+  border-radius: 20px;
+
   display: flex;
   align-items: center;
   margin-bottom: 5px;
@@ -29,7 +31,8 @@ button {
 .list-component > p {
   margin-right: auto;
   padding-left: 30px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .list-component > button {
@@ -43,15 +46,18 @@ button {
 }
 
 .trash-can:hover {
-  color: rgba(255, 65, 65, 0.79);
+  color: #ff4242c9;
 }
 
 .check {
   color: #7895cb;
-  font-weight: 700;
   margin-right: 30px;
 }
 
 .check:hover {
-  color: rgb(74, 85, 162);
+  color: #4a55a2;
+}
+
+.complete {
+  color: #0a780a;
 }

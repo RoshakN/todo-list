@@ -1,20 +1,26 @@
 import PropTypes from "prop-types";
-import DeleteBin2FillIcon from "remixicon-react/DeleteBin2FillIcon";
-import CheckboxCircleFill from "remixicon-react/CheckboxCircleFillIcon";
+import DeleteBin2Fill from "remixicon-react/DeleteBin2FillIcon";
+import CheckboxBlankFill from "remixicon-react/CheckboxBlankFillIcon";
+import CheckboxFill from "remixicon-react/CheckboxFillIcon";
 
 export default function List(props) {
   return (
     <div className="list-component">
       <p key={props.key}>{props.title}</p>
-      <button onClick={() => props.handleDelete(props.id)}>
-        <DeleteBin2FillIcon className="trash-can" />
+      <button onClick={() => props.handleDelete(props.id)} title="Delete">
+        <DeleteBin2Fill className="trash-can" />
       </button>
 
       <button
         onClick={() => props.handleComplete(props.id)}
-        style={{ color: props.isCompleted ? "green" : "" }}
+        // style={{ color: props.isCompleted ? "green" : "" }}
+        title="Complete"
       >
-        <CheckboxCircleFill className="check" />
+        {props.isCompleted === true ? (
+          <CheckboxFill className="check complete" />
+        ) : (
+          <CheckboxBlankFill className="check" />
+        )}
       </button>
     </div>
   );

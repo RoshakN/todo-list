@@ -12,7 +12,7 @@ function App() {
       title: newTask,
       isCompleted: false,
     };
-    setToDoList([...toDoList, newTaskObject]);
+    newTaskObject.title && setToDoList([...toDoList, newTaskObject]);
     clear();
   };
 

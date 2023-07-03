@@ -19,8 +19,39 @@ button {
 }
 
 .list-component {
-  border: 1px solid red;
+  background-color: #c5dff8;
+  border: 3px double #4a55a2;
   display: flex;
-  /* padding: 10px 30px; */
-  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.list-component > p {
+  margin-right: auto;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.list-component > button {
+  margin: 12px;
+  height: 50px;
+  border: transparent;
+}
+
+.trash-can {
+  color: #7895cb;
+}
+
+.trash-can:hover {
+  color: rgba(255, 65, 65, 0.79);
+}
+
+.check {
+  color: #7895cb;
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+.check:hover {
+  color: rgb(74, 85, 162);
 }

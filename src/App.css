@@ -24,7 +24,7 @@
 }
 
 .new-task > input {
-  min-width: 250px;
+  flex-basis: 200px;
   border: 3px double #4a55a2;
   outline: none;
   border-radius: 5px;
@@ -64,8 +64,7 @@
   border: transparent;
 }
 
-.new-task-button:hover,
-.new-task-button:active {
+.new-task-button:hover {
   background-color: #4a55a2;
   color: aliceblue;
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import List from "./List";
 import "./App.css";
 import List from "./List";
 
@@ -53,11 +52,12 @@ function App() {
       <div className="new-task">
         <input
           type="text"
+          placeholder="New task..."
           value={newTask}
           onChange={handleChange}
           onKeyDown={handleEnter}
         />
-        <button onClick={addTask}>Add New Task</button>
+        <button onClick={addTask}>Add</button>
       </div>
       <div className="list">
         {toDoList.map((task) => {

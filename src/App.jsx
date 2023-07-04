@@ -6,6 +6,11 @@ function App() {
   const storedList = JSON.parse(localStorage.getItem("myList"));
   const [toDoList, setToDoList] = useState(storedList || []);
   const [newTask, setNewTask] = useState("");
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    setUserName(prompt("What is your name?"));
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("myList", JSON.stringify(toDoList));
@@ -42,7 +47,6 @@ function App() {
       }
     });
     setToDoList(newList);
-    // setToDoList(toDoList.filter((task) => task.id !== taskId));
   };
 
   const handleEnter = (event) => {
@@ -53,7 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Roshak&apos;s To Do List</h1>
+      <h1>{userName || "Roshak"}&apos;s To Do List</h1>
       <div className="new-task">
         <input
           type="text"

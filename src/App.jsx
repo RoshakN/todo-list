@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import List from "./List";
 
 function App() {
-  const [toDoList, setToDoList] = useState([]);
+  const storedList = JSON.parse(localStorage.getItem("myList"));
+  const [toDoList, setToDoList] = useState(storedList || []);
   const [newTask, setNewTask] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("myList", JSON.stringify(toDoList));
+  }, [toDoList]);
 
   const addTask = () => {
     const newTaskObject = {

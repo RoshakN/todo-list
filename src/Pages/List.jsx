@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Tasks from "../Tasks";
 
 export default function List() {
+  let { username } = useParams();
+
   // State for storing the Tasks in localStorage
   const storedList = JSON.parse(localStorage.getItem("myList"));
 
@@ -54,7 +57,7 @@ export default function List() {
 
   return (
     <div className="App">
-      <h1>{"Roshak"}&apos;s To Do List</h1>
+      <h1>{username || "Roshak"}&apos;s To Do List</h1>
       <div className="new-task">
         <input
           type="text"

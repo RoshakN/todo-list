@@ -4,6 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+h1 {
+  margin-bottom: 100px;
+  color: #4a55a2;
+}
 
 .App {
   width: 80%;
@@ -12,41 +16,28 @@
   padding: 10px 3%;
 }
 
-.App h1 {
-  color: #4a55a2;
-}
-
 .new-task {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 40px;
   margin: 20px;
 }
 
-.new-task > input {
+input {
   flex-basis: 200px;
-  border: 3px double #4a55a2;
-  outline: none;
+  border: 3px solid #4a55a2;
+  padding: 0.5em 1.2em;
   border-radius: 5px;
-}
-
-.new-task-button {
-  background-color: #c5dff8;
-  border: 3px double #4a55a2;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 0 10px;
-  width: 80px;
-}
-
-.new-task-button:active {
-  background-color: #4a55a2;
-  color: aliceblue;
+  margin-right: 5px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
 }
 
 .list-component {
   background-color: #c5dff8;
-  border: 3px double #4a55a2;
+  border: 3px solid #4a55a2;
   border-radius: 20px;
 
   display: flex;
@@ -66,8 +57,6 @@
   background-color: #c5dff8;
   padding: 5px;
   margin: 12px;
-  height: 50px;
-  border: transparent;
 }
 
 .trash-can {

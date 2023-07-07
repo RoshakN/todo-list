@@ -3,7 +3,7 @@ import DeleteBin2Fill from "remixicon-react/DeleteBin2FillIcon";
 import CheckboxBlankFill from "remixicon-react/CheckboxBlankFillIcon";
 import CheckboxFill from "remixicon-react/CheckboxFillIcon";
 
-export default function List(props) {
+export default function Tasks(props) {
   return (
     <div className="list-component">
       <p key={props.key} className="task-title">
@@ -13,11 +13,7 @@ export default function List(props) {
         <DeleteBin2Fill className="trash-can" />
       </button>
 
-      <button
-        onClick={() => props.handleComplete(props.id)}
-        // style={{ color: props.isCompleted ? "green" : "" }}
-        title="Complete"
-      >
+      <button onClick={() => props.handleComplete(props.id)} title="Complete">
         {props.isCompleted === true ? (
           <CheckboxFill className="check complete" />
         ) : (
@@ -28,7 +24,7 @@ export default function List(props) {
   );
 }
 
-List.propTypes = {
+Tasks.propTypes = {
   key: PropTypes.number,
   id: PropTypes.number,
   title: PropTypes.string,

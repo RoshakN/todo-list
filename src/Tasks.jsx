@@ -13,7 +13,7 @@ export default function Tasks(props) {
         <DeleteBin2Fill className="trash-can" />
       </button>
 
-      <button onClick={() => props.handleComplete(props.id)} title="Complete">
+      <button onClick={() => props.handleComplete(props.id)} title="Done">
         {props.isCompleted === true ? (
           <CheckboxFill className="check complete" />
         ) : (

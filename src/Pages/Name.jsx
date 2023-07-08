@@ -15,7 +15,7 @@ function Name() {
   };
 
   const handleClick = () => {
-    navigate(`/list/${name}`);
+    name && navigate(`/list/${name}`);
   };
   const handleEnter = (event) => {
     if (event.key === "Enter") {

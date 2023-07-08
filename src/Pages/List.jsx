@@ -11,6 +11,7 @@ export default function List() {
   const [toDoList, setToDoList] = useState(storedList || []);
   const [newTask, setNewTask] = useState("");
 
+  // This useEffect saves the list of tasks into the local storage of the browser after each change to the list.
   useEffect(() => {
     localStorage.setItem("myList", JSON.stringify(toDoList));
   }, [toDoList]);
@@ -34,6 +35,16 @@ export default function List() {
     setNewTask(event.target.value);
   };
 
+  /* This function's syntax has been trimmed to look cleaner. It is the same as:
+  setToDoList(toDoList.filter((task) => {
+    if(task.id === taskId) {
+      return false
+    } else {
+      return true
+    }
+  }))
+  The id that returns true will be deleted from the new array (made by filter method)
+  */
   const handleDelete = (taskId) => {
     setToDoList(toDoList.filter((task) => task.id !== taskId));
   };
@@ -57,7 +68,7 @@ export default function List() {
 
   return (
     <div className="App">
-      <h1>{username || "Roshak"}&apos;s To Do List</h1>
+      <h1>{username + "'s" || "Your"} To Do List</h1>
       <div className="new-task">
         <input
           type="text"

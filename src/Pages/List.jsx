@@ -77,7 +77,7 @@ export default function List() {
           onChange={handleChange}
           onKeyDown={handleEnter}
         />
-        <button onClick={addTask} className="new-task-button">
+        <button onClick={addTask} className="new-task-btn">
           Add
         </button>
       </div>

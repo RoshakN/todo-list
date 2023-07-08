@@ -49,10 +49,7 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:active {
-  background-color: #4a55a2;
-  color: aliceblue;
-}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -58,7 +58,11 @@ input {
   padding: 5px;
   margin: 12px;
 }
-
+.new-task-btn:active,
+.submit-btn:active {
+  background-color: #4a55a2;
+  color: aliceblue;
+}
 .trash-can {
   color: #7895cb;
 }

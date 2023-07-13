@@ -83,3 +83,30 @@ input {
 .complete {
   color: #0e600e;
 }
+
+.not-found-full {
+  display: flex;
+  flex-direction: column;
+  line-height: 1rem;
+  margin-top: 3rem;
+  justify-content: flex-start;
+  font-size: 20px;
+}
+
+.not-found-full > h2 {
+  margin-bottom: 50px;
+}
+.not-found {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+.not-found > img {
+  height: 200px;
+}
+.not-found > p {
+  font-size: 10em;
+}

@@ -4,7 +4,7 @@ import Name from "./Pages/Name";
 import List from "./Pages/List";
 import PageNotFound from "./Pages/PageNotFound";
 
-function App() {
+export default function App() {
   return (
     <div>
       <Router>
@@ -17,5 +17,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

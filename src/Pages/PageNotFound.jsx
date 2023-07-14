@@ -6,7 +6,7 @@ export default function PageNotFound() {
       <p>The page you are looking for may have been moved or removed.</p>
       <div className="not-found">
         <p>4</p>
-        <img src="src/Assets/search-normal.png" alt="search icon" />
+        <img src="/search-normal.png" alt="search icon" />
         <p>4</p>
       </div>
     </div>

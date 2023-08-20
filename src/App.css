@@ -24,6 +24,11 @@ h1 {
   margin: 20px;
 }
 
+.listUsername,
+.namePageH {
+  color: #d35454;
+}
+
 input {
   flex-basis: 200px;
   border: 3px solid #4a55a2;
@@ -33,6 +38,10 @@ input {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+}
+
+.name-input {
+  border-color: #d35454;
 }
 
 .list-component {
@@ -59,11 +68,25 @@ input {
   padding: 5px;
   margin: 12px;
 }
-.new-task-btn:active,
-.submit-btn:active {
+
+.new-task-btn {
+  border: 3px solid #4a55a2;
+}
+
+.new-task-btn:active {
   background-color: #4a55a2;
   color: aliceblue;
 }
+
+.submit-btn {
+  border: 3px solid #d35454;
+}
+
+.submit-btn:active {
+  background-color: #d35454;
+  color: #fff0f0;
+}
+
 .trash-can {
   color: #7895cb;
 }

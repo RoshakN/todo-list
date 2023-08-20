@@ -23,7 +23,7 @@ function Name() {
 
   return (
     <div className="name-container">
-      <h1>What is Your Name?</h1>
+      <h1 className="namePageH">What is Your Name?</h1>
       <input
         type="text"
         placeholder="Your name..."

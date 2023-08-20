@@ -68,7 +68,10 @@ export default function List() {
 
   return (
     <div className="App">
-      <h1>{username + "'s" || "Your"} To Do List</h1>
+      <h1>
+        <span className="listUsername">{username + "'s" || "Your"}</span> To Do
+        List
+      </h1>
       <div className="new-task">
         <input
           type="text"
